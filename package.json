@@ -15,7 +15,7 @@
     },
     "scripts": {
         "generate": "build-react-routes src/app",
-        "prestart": "npm run generate &",
+        "prestart": "build-react-routes src/app -w &",
         "start": "webpack serve --mode=development",
         "prebuild": "npm run generate",
         "build": "webpack --mode=production",
@@ -86,5 +86,6 @@
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^5.0.4",
         "workbox-webpack-plugin": "^7.1.0"
-    }
+    },
+    "port": 19580
 }

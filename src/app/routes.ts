@@ -15,6 +15,12 @@ import { RoutePath, RouteMatch } from "./types"
 
 export const ROUTES: Record<RoutePath, string[]> = {
     "/": ["/"],
+    "/section": ["/section"],
+    "/section/doors": ["/section/doors"],
+    "/section/garbage": ["/section/garbage"],
+    "/section/internet": ["/section/internet"],
+    "/section/kitchen": ["/section/kitchen"],
+    "/section/tourism": ["/section/tourism"],
 }
 
 /**

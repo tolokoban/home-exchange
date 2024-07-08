@@ -17,14 +17,32 @@ import { matchRoute, useRouteContext, ROUTES } from "./routes"
 import { RouteMatch, RoutePath } from "./types"
 
 const Page0 = React.lazy(() => import("./page"))
+const Page2 = React.lazy(() => import("./section/doors/page"))
+const Page3 = React.lazy(() => import("./section/garbage/page"))
+const Page4 = React.lazy(() => import("./section/internet/page"))
+const Page5 = React.lazy(() => import("./section/kitchen/page"))
+const Page6 = React.lazy(() => import("./section/tourism/page"))
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function App({ lang }: { lang?: string }) {
     const context = useRouteContext()
     const fb = <div>Loading...</div>
     const pg0 = Page0
+    const pg2 = Page2
+    const pg3 = Page3
+    const pg4 = Page4
+    const pg5 = Page5
+    const pg6 = Page6
     return (
-        <Route path="/" Page={pg0} fallback={fb} context={context}/>
+        <Route path="/" Page={pg0} fallback={fb} context={context}>
+            <Route path="/section" fallback={fb} context={context}>
+                <Route path="/section/doors" Page={pg2} fallback={fb} context={context}/>
+                <Route path="/section/garbage" Page={pg3} fallback={fb} context={context}/>
+                <Route path="/section/internet" Page={pg4} fallback={fb} context={context}/>
+                <Route path="/section/kitchen" Page={pg5} fallback={fb} context={context}/>
+                <Route path="/section/tourism" Page={pg6} fallback={fb} context={context}/>
+            </Route>
+        </Route>
     )
 }
 

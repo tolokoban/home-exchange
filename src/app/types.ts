@@ -9,9 +9,15 @@
  */
 export type RoutePath =
     | "/"
+    | "/section"
+    | "/section/doors"
+    | "/section/garbage"
+    | "/section/internet"
+    | "/section/kitchen"
+    | "/section/tourism"
 
 export function isRoutePath(path: string): path is RoutePath {
-    return ["/"].includes(path)
+    return ["/","/section","/section/doors","/section/garbage","/section/internet","/section/kitchen","/section/tourism"].includes(path)
 }
 
 export interface RouteMatch {

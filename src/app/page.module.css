@@ -1,0 +1,9 @@
+.orientation {
+  flex-direction: column;
+}
+
+@media (orientation: landscape) {
+  .orientation {
+    flex-direction: row;
+  }
+}
