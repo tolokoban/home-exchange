@@ -76,6 +76,10 @@ export default function PageSection() {
             to the chanted prayers (there is a loudspeaker for those who are too
             shy to enter 😉).
           </p>
+          <p>
+            You can also play ping-pong at home. The rackets are in this drawer:
+          </p>
+          <img src="image/ping-pong.jpg" alt="Ping-pong rackets" />
         </div>
       </ViewPanel>
     </ViewStrip>

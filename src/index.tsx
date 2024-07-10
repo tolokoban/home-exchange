@@ -7,7 +7,11 @@ import App from "./app";
 import "./index.css";
 
 function start() {
-  Theme.apply();
+  new Theme({
+    colors: {
+      neutral: ["#210", "#876"],
+    },
+  }).apply();
   const container = document.getElementById("root") as HTMLElement;
   const root = createRoot(container);
   root.render(
