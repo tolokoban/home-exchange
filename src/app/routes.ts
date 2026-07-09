@@ -82,7 +82,7 @@ export function matchRoute(path: string, parts: string[] | undefined): RouteMatc
             const [head, tail] = decapitate(current)
             params[name] = head
             current = tail
-        } else if (current.startsWith(part)) {
+        } else if (isPrefixedBy(current,part)) {
             current = current.substring(part.length + 1)
         } else {
             return null
@@ -95,6 +95,17 @@ export function matchRoute(path: string, parts: string[] | undefined): RouteMatc
         distance: current.length,
     }
     return match
+}
+
+function isPrefixedBy(current: string, part: string): boolean {
+    if (part === "/" && current.startsWith("/")) return true
+
+    const items = current.split("/")
+    for (let i = 1; i < items.length + 1; i++) {
+        const prefix = items.slice(0, i).join("/")
+        if (prefix === part) return true
+    }
+    return false
 }
 
 function decapitate(text: string): [string, string] {
@@ -170,7 +181,7 @@ class RouteContext {
         const newHash = this.extractHash(event.newURL)
         const absHash = this.ensureAbsoluteHash(newHash, oldHash)
         if (absHash !== newHash) {
-            history.replaceState({}, "", `#${absHash}`)
+            globalThis.history.replaceState({}, "", `#${absHash}`)
         }
         void this.setHash(absHash)
     }
@@ -231,16 +242,26 @@ export function useRouteParams<T extends string>(
     return params
 }
 
-const isNumber = (data: unknown): data is number => typeof data === "number"
+export function useRouteParamAsString(name: string, defaultValue = ""): string {
+    const params = useRouteParams(name)
+    return params[name] ?? defaultValue
+}
 
 export function useRouteParamAsInt(name: string, defaultValue = 0): number {
-    return Math.round(useRouteParam(name, defaultValue, isNumber))
+    const params = useRouteParams(name)
+    const value = parseInt(params[name] ?? "", 10)
+    return Number.isNaN(value) ? defaultValue : value
 }
 
 export function useRouteParamAsFloat(name: string, defaultValue = 0): number {
-    return useRouteParam(name, defaultValue, isNumber)
+    const params = useRouteParams(name)
+    const value = parseFloat(params[name] ?? "")
+    return Number.isNaN(value) ? defaultValue : value
 }
 
+/**
+ * Parse param as JSON strings.
+ */
 export function useRouteParam<T>(
     name: string,
     defaultValue: T,
