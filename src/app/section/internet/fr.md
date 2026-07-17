@@ -17,9 +17,23 @@ Vous pouvez utiliser des câbles RJ45. Il y a des prises dans deux chambres à l
 
 ![Prise réseau](image/rj45.jpg)
 
-## Ordinateur TV
+## TV
 
-Il y a un ordinateur connecté à la TV. Appuyez sur le bouton marche/arrêt pour le démarrer/éteindre. Appui court pour démarrer/arrêter la veille. Appui long pour démarrer/éteindre complètement (prend plus de temps, mais obligatoire après une coupure de courant).
+La télécommande suivante vous permet d'accéder aux chaînes de TV
+
+![FreeBox-TV](image/freebox-tv.webp)
+
+Assurez-vous que la sortie TV est réglée sur HDMI-3. Pour cela, utilisez le bouton **AV** de la télécommande blanche.
+
+![AV](image/tv-3.jpg) ![AV](image/tv-2.jpg)
+
+* **HDMI-1**: pour l'ordinateur (voir plus bas)
+* **HDMI-2**: pour le lecteur Blu-Ray
+* **HDMI-3**: pour la TV par Freebox
+
+----
+
+Il y a aussi un ordinateur connecté à la TV. Appuyez sur le bouton marche/arrêt pour le démarrer/éteindre. Appui court pour démarrer/arrêter la veille. Appui long pour démarrer/éteindre complètement (prend plus de temps, mais obligatoire après une coupure de courant).
 
 ![Ordinateur TV](image/computer.jpg)
 ![Power button](image/power-button.jpg)

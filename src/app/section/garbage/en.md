@@ -8,6 +8,4 @@ For this you can use the two black boxes like this:
 
 ![Black boxes](image/black-boxes.jpg)
 
-If the boxes are full, you can empty them in the trash bins in the village center (point **2** on the map below).
-
-![Map of the trash bins](image/garbage.webp)
+If the boxes are full, you can empty them in the trash bins at the corner of the cemetery.

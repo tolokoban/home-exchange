@@ -17,8 +17,21 @@ You can use RJ45 cables. There are plugs in two rooms upstair, one room downstai
 
 ![Network plug](image/rj45.jpg)
 
-## TV computer
+## TV
 
+The following remote gives you access to TV
+
+![FreeBox-TV](image/freebox-tv.webp)
+
+Make sure the TV output is set to HDMI-3. For this, use the **AV** button on the remote control.
+
+![AV](image/tv-3.jpg) ![AV](image/tv-2.jpg)
+
+* **HDMI-1**: pour l'ordinateur (voir plus bas)
+* **HDMI-2**: pour le lecteur Blu-Ray
+* **HDMI-3**: pour la TV par Freebox
+
+----
 There is a computer connected to the TV. Press the power button to start/stop it. Short press to start/stop hibernation. Long press to start/stop completely (take more time, but mandatory after a power outage).
 
 ![Ordinateur TV](image/computer.jpg)

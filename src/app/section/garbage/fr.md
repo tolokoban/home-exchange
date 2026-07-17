@@ -8,6 +8,4 @@ Pour cela, vous pouvez utiliser les deux caisses noires comme suit :
 
 ![Caisses noires](image/black-boxes.jpg)
 
-Si les caisses sont pleines, vous pouvez les vider dans les poubelles du centre du village (point **2** sur la carte ci-dessous).
-
-![Carte des poubelles](image/garbage.webp)
+Si les caisses sont pleines, vous pouvez les vider dans les containers en bas de la rue, à l'angle du cimetière.
